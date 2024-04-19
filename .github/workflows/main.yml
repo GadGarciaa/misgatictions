@@ -1,13 +1,10 @@
 name: GitHub Actions Practica
-on:
-  push
-
+on: push
 jobs:
   Explorando-GitHub-Actions:
-    runs-on: ubuntu-latest
-    
+    runs-on: ubuntu-latest  
     steps:
-    - run: echo "El flujo de trabajo se está ejecutando en el evento: ${{ github.event_name }}"
+    - run: echo "El flujo de trabajo está siendo ejecutado en el evento: \"${{ github.event_name }}\""
     - run: echo "El trabajo se está ejecutando en un servidor ${{ runner.os }} hospedado en Github"
     - run: echo "El nombre de la rama es ${{ github.ref }} y tu repositorio es ${{ github.repository }}"
     - name: Verifica el código del repositorio
